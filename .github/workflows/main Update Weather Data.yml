@@ -31,6 +31,6 @@ jobs:
           git commit -m "Update weather data"
           git push https://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@github.com/Sieraw1/chengdu-weather.git master
         env:
-          GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}
+          GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
 
         
