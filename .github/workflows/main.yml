@@ -39,7 +39,7 @@ jobs:
           branch: main
           file_pattern: '成都天气.csv'
           # 需要使用个人访问令牌
-          GITHUB_TOKEN: ${{ secrets.WEATHER_TOKEN }}
+          WEATHER_TOKEN: ${{ secrets.WEATHER_TOKEN }}
 
       # 添加 Slack 通知（可选）
       # 如果需要通知，可以添加以下步骤
