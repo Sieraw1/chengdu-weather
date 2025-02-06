@@ -1,0 +1,32 @@
+name: Update Weather Data
+on:
+  schedule:
+    - cron: '0 0 * * *'  
+  workflow_dispatch:  
+
+jobs:
+  update-weather-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 pandas
+
+      - name: Run script
+        run: python weather.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add 成都天气.csv
+          git commit -m "Update weather data"
+        
