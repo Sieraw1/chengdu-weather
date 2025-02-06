@@ -29,7 +29,7 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           git add 成都天气.csv
           git commit -m "Update weather data"
-          git push https://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@github.com/Sieraw1/chengdu-weather.git master
+          git push https://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@github.com/Sieraw1/chengdu-weather.git main
         env:
           GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
 
